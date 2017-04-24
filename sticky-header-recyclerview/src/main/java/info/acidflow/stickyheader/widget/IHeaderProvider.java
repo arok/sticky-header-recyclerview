@@ -29,8 +29,9 @@ public interface IHeaderProvider< VH extends RecyclerView.ViewHolder > {
      */
     int getHeaderForPosition( int position );
 
-    VH onCreateHeaderViewHolder( ViewGroup parent );
+    VH onCreateHeaderViewHolder( ViewGroup parent, int viewType );
 
     void onBindHeaderViewHolder( VH holder, int position );
 
+    int getViewType(int position);
 }

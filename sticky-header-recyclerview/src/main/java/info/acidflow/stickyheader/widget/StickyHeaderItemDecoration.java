@@ -169,7 +169,7 @@ public class StickyHeaderItemDecoration extends RecyclerView.ItemDecoration {
             return null;
         }
         // Create the View corresponding the header
-        RecyclerView.ViewHolder headerHolder = mHeaderProvider.onCreateHeaderViewHolder( rv );
+        RecyclerView.ViewHolder headerHolder = mHeaderProvider.onCreateHeaderViewHolder( rv, mHeaderProvider.getViewType(position) );
         mHeaderProvider.onBindHeaderViewHolder(
                 headerHolder, mHeaderProvider.getHeaderForPosition( position )
         );
